@@ -68,7 +68,7 @@ def user_login(request):
 			elif user.is_active and user.is_patient:
 				print(user.username)
 				login(request,user)
-				return HttpResponseRedirect(reverse('patient_dashboard'))      
+				return HttpResponseRedirect("/")      
 
 			else:
 				HttpResponse("ACCOUNT NOT ACTIVE")
